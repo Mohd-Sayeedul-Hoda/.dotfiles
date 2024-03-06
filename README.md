@@ -4,4 +4,4 @@
 
 ##### Tmux contain my tmux config file
 
-##### I use alacritty as my terminal emulater it is light weight contain most of the feaute use and we can use ccross platform my just by just having config file
+##### I use alacritty as my terminal emulater it is light weight contain most of the feature that I use and we can use it cross platform by just having same config file
