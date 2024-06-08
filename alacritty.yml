@@ -1,13 +1,3 @@
-shell:
-  # program: "C:\\Windows\\system32\\cmd.exe"
-  program: "C:\\Windows\\System32\\wsl.exe"
-
-# Startup directory
-#
-# Directory the shell is started in. If this is unset, or `None`, the working
-# directory of the parent process will be used.
-working_directory: \\wsl.localhost\Ubuntu\home\sayeed
-
 window_opacity: 0.95
 
 window:
@@ -30,18 +20,18 @@ scrolling:
   # scrollback is enabled (history > 0).
   multiplier: 3
 font:
-  normal:
-    family: 0xProto Nerd Font Propo
-    style: Regular
-  bold:
-    family: DejaVuSansMono Nerd Font Mono
-    style: Bold
-  italic:
-    family: DejaVuSansMono Nerd Font Mono
-    style: Italic
-  bold_italic:
-    family: DejaVuSansMono Nerd Font Mono
-    style: Bold Italic
+#  normal:
+#    family: 0xProto Nerd Font Propo
+#    style: Regular
+#  bold:
+#    family: DejaVuSansMono Nerd Font Mono
+#    style: Bold
+#  italic:
+#    family: DejaVuSansMono Nerd Font Mono
+#    style: Italic
+#  bold_italic:
+#    family: DejaVuSansMono Nerd Font Mono
+#    style: Bold Italic
   size: 16.0
 # If `true`, bold text is drawn using the bright color variants.
 draw_bold_text_with_bright_colors: false
@@ -108,5 +98,3 @@ mouse:
     launcher:
       program: open
     modifiers: Command
-env:
-  TERM: xterm-256color
