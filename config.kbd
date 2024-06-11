@@ -1,0 +1,33 @@
+(defcfg
+	input (device-file "/dev/input/by-path/platform-i8042-serio-0-event-kbd")
+	output (uinput-sink "KMonad mkb kbd")
+	fallthrough true
+	allow-cmd false
+)
+
+(defalias
+lay1 (layer-toggle layer1)
+lmt (tap-hold-next-release 250 a lmet)
+)
+
+(defsrc
+tab
+caps 
+lsft                    rsft
+lctl lmet lalt ralt cmp rctl 
+)	
+
+(deflayer mine
+tab
+lctl
+lalt                   bspc
+caps @lay1 lsft rsft tab rctl 
+)   
+
+(deflayer layer1 
+_
+_
+_                   _
+_   _   _   esc  _  _
+)
+
