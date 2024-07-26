@@ -56,11 +56,11 @@ export default {};
 }} 
     ]], {i(1), i(2),  i(0)})),
 
-    s("af", 
+    s("af",
     fmt([[({}) => {{
     return {}
 }}
-    ]], {i(1), i(2)})), 
+    ]], {i(1), i(2)})),
 
     s("afe",
     fmt([[export const {} = ({}) => {{

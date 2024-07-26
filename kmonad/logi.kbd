@@ -1,0 +1,32 @@
+(defcfg
+	input (device-file "/dev/input/by-path/pci-0000:05:00.4-usb-0:2:1.1-event-kbd")
+	output (uinput-sink "KMonad logi kbd")
+	fallthrough true
+	allow-cmd false
+)
+
+(defalias
+lay1 (layer-toggle layer1)
+lmt (tap-hold-next-release 250 a lmet)
+)
+
+(defsrc
+tab 
+caps 
+lsft                 rsft
+lctl lmet lalt ralt  rctl 
+)	
+
+(deflayer mine
+tab 
+lctl
+lalt                 bspc
+caps @lay1 lsft rsft tab
+)   
+
+(deflayer layer1 
+_  
+_
+_               lmet
+_   _   _   esc  _
+)

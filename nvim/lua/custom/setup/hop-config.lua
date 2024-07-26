@@ -6,7 +6,7 @@ M.setup = function()
     local hop = require('hop')
     local directions = require('hop.hint').HintDirection
     vim.keymap.set('', 'T', function()
-        hop.hint_anywhere()
+        hop.hint_words()
     end, { remap = true })
 
     vim.keymap.set('', 't', function()

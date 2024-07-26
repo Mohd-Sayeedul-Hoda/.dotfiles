@@ -6,8 +6,7 @@
 )
 
 (defalias
-lay1 (layer-toggle layer1)
-lmt (tap-hold-next-release 250 a lmet)
+myCtl (tap-next esc lctl) 
 )
 
 (defsrc
@@ -19,15 +18,8 @@ lctl lmet lalt ralt cmp rctl
 
 (deflayer mine
 tab
-lctl
+@myCtl
 lalt                   bspc
-caps @lay1 lsft rsft tab rctl 
+caps lmet lsft rsft tab lmet
 )   
-
-(deflayer layer1 
-_
-_
-_                   _
-_   _   _   esc  _  _
-)
 

@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+# export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -97,23 +97,29 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias zshconfig="vim ~/.zshrc"
-alias vim="nvim"
+alias zshconfig="vi ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+alias vi="nvim"
 alias clr="clear"
 alias mk="mkdir"
+alias tmx="tmux"
 #alias tmux="TERM=screen-256color-bce tmux"
 alias lg="lazygit"
-alias gst="$HOME/myscript/goto.sh"
-alias gs="source $HOME/myscript/gotonotmux.sh"
+alias gst="$HOME/.myScript/goto.sh"
+alias gtt="$HOME/.myScript/newTmux.sh"
+alias gs="source $HOME/.myScript/gotonotmux.sh"
+alias gt="source $HOME/.myScript/newGoto.sh"
+alias bt="$HOME/.myScript/brightness.sh"
+alias bm="blueman-manager"
+alias temp="$HOME/.myScript/temprature.sh"
+alias wp="$HOME/.myScript/wallpaper.sh"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 source ~/.profile 
+export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:/home/aman/.local/bin
+export PATH=$PATH:/home/aman/.myScript
+export PATH="$PATH:$(go env GOPATH)/bin"
+eval "$(zoxide init zsh)"
 
-# bun completions
-[ -s "/home/sayeed/.bun/_bun" ] && source "/home/sayeed/.bun/_bun"
 
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-export PATH=$PATH:/home/sayeed/personalBin/zig_folder
-export PATH=$PATH:/home/sayeed/personalBin/exercism/bin
-
+if [ -e /home/aman/.nix-profile/etc/profile.d/nix.sh ]; then . /home/aman/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
