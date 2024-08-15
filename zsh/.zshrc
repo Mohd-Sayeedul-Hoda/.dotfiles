@@ -96,6 +96,12 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
+#
+export HISTFILESIZE=100000
+export HISTSIZE=100000
+
+eval "$(zoxide init zsh)"
+
 # Example aliases
 alias zshconfig="vi ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
@@ -103,6 +109,7 @@ alias vi="nvim"
 alias clr="clear"
 alias mk="mkdir"
 alias tmx="tmux"
+alias cd="z"
 #alias tmux="TERM=screen-256color-bce tmux"
 alias lg="lazygit"
 alias gst="$HOME/.myScript/goto.sh"
@@ -113,13 +120,13 @@ alias bt="$HOME/.myScript/brightness.sh"
 alias bm="blueman-manager"
 alias temp="$HOME/.myScript/temprature.sh"
 alias wp="$HOME/.myScript/wallpaper.sh"
+alias fh="$HOME/.myScript/findHistory.sh"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 source ~/.profile 
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:/home/aman/.local/bin
-export PATH=$PATH:/home/aman/.myScript
 export PATH="$PATH:$(go env GOPATH)/bin"
-eval "$(zoxide init zsh)"
+export PATH=~/.npm-global/bin:$PATH 
 
 
 if [ -e /home/aman/.nix-profile/etc/profile.d/nix.sh ]; then . /home/aman/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer

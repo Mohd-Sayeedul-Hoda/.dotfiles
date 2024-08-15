@@ -1,0 +1,26 @@
+(defcfg
+	input (device-file "/dev/input/by-path/pci-0000:05:00.4-usbv2-0:2:1.1-event-kbd")
+	output (uinput-sink "KMonad logi kbd")
+	fallthrough true
+	allow-cmd false
+)
+
+
+(defalias
+myCtl (tap-hold-next 200 esc lctl :timeout-button lctl)
+)
+
+(defsrc
+tab
+caps 
+lsft                rsft
+lctl lmet lalt ralt rctl 
+)	
+
+(deflayer mine
+tab
+@myCtl
+lalt                bspc
+caps lmet lsft rsft tab 
+)   
+

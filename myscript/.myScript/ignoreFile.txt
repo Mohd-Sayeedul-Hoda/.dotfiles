@@ -4,7 +4,6 @@ node_modules
 .rustup
 .npm
 personalBin
-nvim
 -linux64
 .vim
 go
@@ -18,3 +17,8 @@ go
 .mozilla
 .pki
 .stack
+Code
+.var
+google-chrome-unstable
+.npm-global
+.kube

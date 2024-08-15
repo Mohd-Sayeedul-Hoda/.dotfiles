@@ -6,10 +6,11 @@
 )
 
 (defalias
-myCtl (tap-next esc lctl) 
+myCtl (tap-hold-next 200 esc lctl :timeout-button lctl)
 )
 
 (defsrc
+esc
 tab
 caps 
 lsft                    rsft
@@ -17,9 +18,10 @@ lctl lmet lalt ralt cmp rctl
 )	
 
 (deflayer mine
+esc
 tab
 @myCtl
 lalt                   bspc
-caps lmet lsft rsft tab lmet
+caps lmet lsft rsft tab rctl 
 )   
 
