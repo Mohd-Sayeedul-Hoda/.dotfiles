@@ -121,6 +121,8 @@ alias bm="blueman-manager"
 alias temp="$HOME/.myScript/temprature.sh"
 alias wp="$HOME/.myScript/wallpaper.sh"
 alias fh="$HOME/.myScript/findHistory.sh"
+alias sh="$HOME/.myScript/searchFile.sh"
+
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 source ~/.profile 
 export PATH=$PATH:/usr/local/go/bin

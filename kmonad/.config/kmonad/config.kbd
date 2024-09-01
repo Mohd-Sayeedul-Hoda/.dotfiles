@@ -6,7 +6,7 @@
 )
 
 (defalias
-myCtl (tap-hold-next 200 esc lctl :timeout-button lctl)
+myCtl (tap-hold-next 270 esc lctl :timeout-button lctl)
 )
 
 (defsrc

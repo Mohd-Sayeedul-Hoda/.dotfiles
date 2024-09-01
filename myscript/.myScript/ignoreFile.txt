@@ -5,6 +5,7 @@ node_modules
 .npm
 personalBin
 -linux64
+google-chrome
 .vim
 go
 .rbenv
