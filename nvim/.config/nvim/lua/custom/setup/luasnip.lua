@@ -43,19 +43,19 @@ ls.add_snippets("lua", {
 ls.add_snippets("javascriptreact", {
 
 	s(
-		"rde",
+		"rfe",
 		fmt(
 			[[function {}({}){{
         return {}
 }}
-export default {};
+export default {}
     ]],
 			{ i(1), i(2), i(0), rep(1) }
 		)
 	),
 
 	s(
-		"re",
+		"ref",
 		fmt(
 			[[export function {}({}){{
         return {}
@@ -66,7 +66,7 @@ export default {};
 	),
 
 	s(
-		"af",
+		"ra",
 		fmt(
 			[[({}) => {{
     return {}
@@ -77,7 +77,7 @@ export default {};
 	),
 
 	s(
-		"afe",
+		"rea",
 		fmt(
 			[[export const {} = ({}) => {{
     return {}
@@ -88,7 +88,7 @@ export default {};
 	),
 
 	s(
-		"afde",
+		"rae",
 		fmt(
 			[[const {} = ({}) => {{
     return {}
@@ -183,4 +183,4 @@ if err != nil{{
 	),
 })
 
-vim.keymap.set("n", "<leader>ms", "<cmd>source ~/.config/nvim/lua/custom/setup/luasnip.lua<CR>")
+vim.keymap.set("n", "<leader>ms", "<cmd>source ~/.config/nvim/init.lua<CR>")

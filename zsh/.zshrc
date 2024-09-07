@@ -120,8 +120,10 @@ alias bt="$HOME/.myScript/brightness.sh"
 alias bm="blueman-manager"
 alias temp="$HOME/.myScript/temprature.sh"
 alias wp="$HOME/.myScript/wallpaper.sh"
-alias fh="$HOME/.myScript/findHistory.sh"
-alias sh="$HOME/.myScript/searchFile.sh"
+alias sh="$HOME/.myScript/findHistory.sh"
+alias sf="$HOME/.myScript/searchFile.sh"
+alias obs="$HOME/.myScript/obs.sh"
+alias shh="history | fzf | sed 's/[0-9]\+ //g'"
 
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 source ~/.profile 
