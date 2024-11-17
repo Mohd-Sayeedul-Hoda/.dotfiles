@@ -123,7 +123,7 @@ alias wp="$HOME/.myScript/wallpaper.sh"
 alias sh="$HOME/.myScript/findHistory.sh"
 alias sf="$HOME/.myScript/searchFile.sh"
 alias obs="$HOME/.myScript/obs.sh"
-alias shh="history | fzf | sed 's/[0-9]\+ //g'"
+alias shh="history | fzy | sed 's/[0-9]\+ //g'"
 
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 source ~/.profile 
@@ -134,3 +134,7 @@ export PATH=~/.npm-global/bin:$PATH
 
 
 if [ -e /home/aman/.nix-profile/etc/profile.d/nix.sh ]; then . /home/aman/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"

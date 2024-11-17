@@ -7,6 +7,8 @@
 
 (defalias
 myCtl (tap-hold-next 270 esc lctl :timeout-button lctl)
+lshf (tap-next Q lsft)
+rshf (tap-next Z rsft)
 )
 
 (defsrc
@@ -22,6 +24,6 @@ esc
 tab
 @myCtl
 lalt                   bspc
-caps lmet lsft rsft tab rctl 
+caps lmet @lshf @rshf tab rctl 
 )   
 

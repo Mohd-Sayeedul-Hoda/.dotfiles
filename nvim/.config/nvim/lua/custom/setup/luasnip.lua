@@ -173,10 +173,19 @@ if err != nil{{
 		)
 	),
 	s(
-		"ie",
+		"ier",
 		fmt(
 			[[if err != nil{{
   return err
+}}]],
+			{}
+		)
+	),
+	s(
+		"ierf",
+		fmt(
+			[[if err != nil{{
+  log.Fatal(err)
 }}]],
 			{}
 		)

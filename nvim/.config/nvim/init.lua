@@ -872,7 +872,18 @@ else
 			"nvim-treesitter/nvim-treesitter",
 			build = ":TSUpdate",
 			opts = {
-				ensure_installed = { "bash", "c", "diff", "html", "lua", "luadoc", "markdown", "vim", "vimdoc" },
+				ensure_installed = {
+					"bash",
+					"c",
+					"diff",
+					"html",
+					"lua",
+					"luadoc",
+					"markdown",
+					"markdown_inline",
+					"vim",
+					"vimdoc",
+				},
 				-- Autoinstall languages that are not installed
 				auto_install = true,
 				highlight = {
@@ -967,6 +978,11 @@ else
 	local debugger = require("custom.setup.debugger")
 	debugger.setup()
 
+	local dateTime = require("custom.setup.dateTime")
+	dateTime.setup()
+
 	require("custom.setup.luasnip")
 end
 -- NOTE: Here is where you install your plugins.
+--
+--
