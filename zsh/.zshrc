@@ -123,6 +123,7 @@ alias wp="$HOME/.myScript/wallpaper.sh"
 alias sh="$HOME/.myScript/findHistory.sh"
 alias sf="$HOME/.myScript/searchFile.sh"
 alias obs="$HOME/.myScript/obs.sh"
+alias chy="$HOME/.myScript/hyprConfigChange.py"
 alias shh="history | fzy | sed 's/[0-9]\+ //g'"
 
 # alias ohmyzsh="mate ~/.oh-my-zsh"
@@ -138,3 +139,9 @@ if [ -e /home/aman/.nix-profile/etc/profile.d/nix.sh ]; then . /home/aman/.nix-p
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/aman/.local/bin/google-cloud-sdk/path.zsh.inc' ]; then . '/home/aman/.local/bin/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/aman/.local/bin/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/aman/.local/bin/google-cloud-sdk/completion.zsh.inc'; fi

@@ -104,7 +104,7 @@ vim.g.have_nerd_font = true
 vim.opt.number = true
 -- You can also add relative line numbers, to help with jumping.
 --  Experiment for yourself to see if you like it!
--- vim.opt.relativenumber = true
+vim.opt.relativenumber = true
 
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.opt.mouse = "a"
@@ -982,6 +982,13 @@ else
 	dateTime.setup()
 
 	require("custom.setup.luasnip")
+
+	vim.api.nvim_set_keymap(
+		"n",
+		"<leader>sc",
+		":TodoTelescope<CR>",
+		{ noremap = true, silent = true, desc = "[S]earch [C]omment" }
+	)
 end
 -- NOTE: Here is where you install your plugins.
 --
