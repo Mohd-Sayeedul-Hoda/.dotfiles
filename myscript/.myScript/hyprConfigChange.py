@@ -2,6 +2,7 @@
 
 import os
 import sys
+import subprocess
 
 
 folder = "/home/aman/.dotfiles/hypr/.config/hypr/"
@@ -55,7 +56,18 @@ def main():
     rename_file(fileName1, fileName2)
     rename_file(fileBackUp, fileName1)
     rename_file(fileName2, fileBackUp)
-    return 0  # Indicate successful execution
+
+    try:
+        result = subprocess.run(
+            ["hyprctl", "reload"], capture_output=True, text=True, check=True
+        )
+        print("Hyprland configuration reloaded successfully.")
+        # ... (optional: print output)
+
+    except subprocess.CalledProcessError as e:
+        print("Error: Failed to reload Hyprland configuration after renaming file.")
+        # ... (print error details)
+        return 0  # Indicate successful execution
 
 
 if __name__ == "__main__":
