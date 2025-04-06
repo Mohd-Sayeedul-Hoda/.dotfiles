@@ -124,8 +124,9 @@ alias sh="$HOME/.myScript/findHistory.sh"
 alias sf="$HOME/.myScript/searchFile.sh"
 alias obs="$HOME/.myScript/obs.sh"
 alias chy="$HOME/.myScript/hyprConfigChange.py"
-alias awt="$HOME/.myScript/awt.sh"
 alias shh="history | fzy | sed 's/[0-9]\+ //g'"
+alias awt="$HOME/.myScript/awt.sh"
+alias swt="source $HOME/.myScript/swt.sh"
 
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 source ~/.profile 
