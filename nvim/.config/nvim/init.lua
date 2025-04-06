@@ -969,8 +969,8 @@ else
 	local illuminatedConfig = require("custom.setup.illuminate-config")
 	illuminatedConfig.setup()
 
-	local tokyonightConfig = require("custom.setup.tokyonight-config")
-	tokyonightConfig.setup()
+	-- local tokyonightConfig = require("custom.setup.tokyonight-config")
+	-- tokyonightConfig.setup()
 
 	local keymapConfig = require("custom.setup.keymap")
 	keymapConfig.setup()
@@ -981,6 +981,10 @@ else
 	local dateTime = require("custom.setup.dateTime")
 	dateTime.setup()
 
+	local catppuccinConfig = require("custom.setup.catpuccin-config")
+	catppuccinConfig.setup()
+	vim.cmd.colorscheme("catppuccin")
+
 	require("custom.setup.luasnip")
 
 	vim.api.nvim_set_keymap(
@@ -990,6 +994,27 @@ else
 		{ noremap = true, silent = true, desc = "[S]earch [C]omment" }
 	)
 end
+
+-- open pdf file from nvim to okular directly
+-- BufReadCmd function is first called when we open the file
+vim.api.nvim_create_autocmd("BufReadCmd", {
+	pattern = "*.pdf",
+	callback = function()
+		local filename = vim.fn.shellescape(vim.api.nvim_buf_get_name(0)) -- getting the file name
+		vim.cmd("silent !okular " .. filename .. " &") -- opening the with okular
+		vim.cmd("let tobedeleted = bufnr('%') | b# | exe \"bd! \" . tobedeleted") --
+	end,
+})
+
+vim.api.nvim_create_autocmd("BufReadCmd", {
+	pattern = { "*.png", "*.jpg", "*.jpeg", "*.gif", "*.webp" },
+	callback = function()
+		local filename = vim.fn.shellescape(vim.api.nvim_buf_get_name(0))
+		vim.cmd("silent !feh " .. filename .. " &")
+		vim.cmd("let tobedeleted = bufnr('%') | b# | exe \"bd! \" . tobedeleted")
+	end,
+})
+
 -- NOTE: Here is where you install your plugins.
 --
 --
