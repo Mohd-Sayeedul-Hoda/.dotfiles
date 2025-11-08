@@ -15,6 +15,7 @@
   "modules-right": [
     "tray",
     "backlight",
+    "wireplumber",
     "battery",
     "custom/uptime"
   ]
