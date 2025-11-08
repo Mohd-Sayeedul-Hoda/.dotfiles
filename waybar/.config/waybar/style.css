@@ -1,0 +1,60 @@
+
+* {
+  font-family: "sans-serif";
+  color: pink;
+  background-color: #363a4f;
+  border: none;
+  border-radius: 0px;
+  min-height: 0;
+  margin: 1px;
+}
+
+#clock {
+  margin: 1px;
+  font-size: 18px;
+}
+
+#tray {
+  color: pink;
+}
+
+#custom-uptime {
+  padding: 0px 5px;
+}
+
+#workspaces {
+  padding: 0px;
+  margin: 0px;
+}
+
+#workspaces button {
+  padding: 0px 8px;
+  margin: 0px;
+  border: none;
+  background-color: transparent;
+  box-shadow: none;
+  outline: none;
+  min-height: 0;
+}
+
+#workspaces button label,
+#workspaces button box {
+  margin: 0px;
+  padding: 0px;
+  background-color: transparent;
+}
+
+#workspaces button.active {
+  background-color: #4a4f6a;
+  margin: 0px;
+  box-shadow: none;
+  outline: none;
+}
+
+#workspaces button.active label,
+#workspaces button.active box {
+  background-color: #4a4f6a;
+  margin: 0px;
+  padding: 0px;
+}
+

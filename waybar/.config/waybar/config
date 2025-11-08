@@ -1,0 +1,21 @@
+{
+  "include": "~/.config/waybar/modules",
+  "layer": "top",
+  "position": "bottom",
+  "exclusive": true,
+  "spacing": 3,
+  "modules-left": [
+  "hyprland/workspaces",
+    "cpu",
+    "memory"
+  ],
+  "modules-center": [
+    "clock"
+  ],
+  "modules-right": [
+    "tray",
+    "backlight",
+    "battery",
+    "custom/uptime"
+  ]
+}

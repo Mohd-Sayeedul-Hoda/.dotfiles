@@ -21,6 +21,10 @@ M.setup = function()
 	-- Tab Previous (Ctrl+Shift+Tab)
 	vim.api.nvim_set_keymap("n", "<C-S-Tab>", ":tabprevious<CR>", { noremap = true, silent = true }) -- Normal mode
 	vim.api.nvim_set_keymap("i", "<C-S-Tab>", "<C-o>:tabprevious<CR>", { noremap = true, silent = true }) -- Insert mode
+
+	vim.api.nvim_set_keymap("n", "<leader>jq", ":%! jq '.'<CR>", { noremap = true })
+
 	print("Custom tab key mappings loaded.") -- Confirmation message
 end
+
 return M

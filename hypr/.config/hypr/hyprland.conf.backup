@@ -40,12 +40,8 @@ $lock = $scriptsDir/lockscreen
 # exec-once = $terminal
 exec-once = nm-applet
 exec-once = hyprpaper  # & firefox
-exec-once = waybar --config ~/.config/hypr/waybar/config --style ~/.config/hypr/waybar/style.css
+exec-once = waybar
 exec-once = dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
-
-
-
-
 
 #############################
 ### ENVIRONMENT VARIABLES ###
@@ -179,9 +175,7 @@ input {
 }
 
 # https://wiki.hyprland.org/Configuring/Variables/#gestures
-gestures {
-    workspace_swipe = true
-}
+gesture = 3, horizontal, workspace,
 
 # Example per-device config
 # See https://wiki.hyprland.org/Configuring/Keywords/#per-device-input-configs for more

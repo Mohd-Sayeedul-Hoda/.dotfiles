@@ -24,3 +24,5 @@ google-chrome-unstable
 .npm-global
 .kube
 .sdkman
+.gemini
+.azure

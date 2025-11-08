@@ -173,10 +173,10 @@ if err != nil{{
 		)
 	),
 	s(
-		"ier",
+		"ierp",
 		fmt(
 			[[if err != nil{{
-  return err
+  return  err
 }}]],
 			{}
 		)

@@ -235,8 +235,8 @@ if vim.g.vscode then
 
 		{ import = "custom.plugins" },
 	}, {})
-	local hopConfig = require("custom.setup.hop-config")
-	hopConfig.setup()
+	-- local hopConfig = require("custom.setup.hop-config")
+	-- hopConfig.setup()
 
 	local keymapConfig = require("custom.setup.keymap")
 	keymapConfig.setup()
@@ -963,8 +963,8 @@ else
 	-- local neotreeConfig = require("custom.setup.neo-tree-config")
 	-- neotreeConfig.setup()
 	--
-	local hopConfig = require("custom.setup.hop-config")
-	hopConfig.setup()
+	-- local hopConfig = require("custom.setup.hop-config")
+	-- hopConfig.setup()
 
 	local illuminatedConfig = require("custom.setup.illuminate-config")
 	illuminatedConfig.setup()
@@ -1014,7 +1014,3 @@ vim.api.nvim_create_autocmd("BufReadCmd", {
 		vim.cmd("let tobedeleted = bufnr('%') | b# | exe \"bd! \" . tobedeleted")
 	end,
 })
-
--- NOTE: Here is where you install your plugins.
---
---

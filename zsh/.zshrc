@@ -120,30 +120,49 @@ alias bt="$HOME/.myScript/brightness.sh"
 alias bm="blueman-manager"
 alias temp="$HOME/.myScript/temprature.sh"
 alias wp="$HOME/.myScript/wallpaper.sh"
-alias sh="$HOME/.myScript/findHistory.sh"
+#alias sh="$HOME/.myScript/findHistory.sh"
 alias sf="$HOME/.myScript/searchFile.sh"
 alias obs="$HOME/.myScript/obs.sh"
 alias chy="$HOME/.myScript/hyprConfigChange.py"
 alias shh="history | fzy | sed 's/[0-9]\+ //g'"
 alias awt="$HOME/.myScript/awt.sh"
 alias swt="source $HOME/.myScript/swt.sh"
+# Worktree manager aliases
+alias wtm="$HOME/.dotfiles/myscript/.myScript/worktree_manager.sh"
+alias wtmc="$HOME/.dotfiles/myscript/.myScript/worktree_manager.sh create"
+alias wtms="$HOME/.dotfiles/myscript/.myScript/worktree_manager.sh switch"
+alias wtmr="$HOME/.dotfiles/myscript/.myScript/worktree_manager.sh remove"
+alias wtml="$HOME/.dotfiles/myscript/.myScript/worktree_manager.sh list"
 
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-source ~/.profile 
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:/home/aman/.local/bin
 export PATH="$PATH:$(go env GOPATH)/bin"
 export PATH=~/.npm-global/bin:$PATH 
+export PATH=$PATH:/home/aman/bin
+export PATH="$HOME/.govm/shim:$PATH"
+export PATH=$PATH:/home/aman/.local/drivers
 
+if [ -f "$HOME/.zsh_env_vars" ]; then
+  source "$HOME/.zsh_env_vars"
+fi
 
 if [ -e /home/aman/.nix-profile/etc/profile.d/nix.sh ]; then . /home/aman/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+
+if [ -f '/home/aman/.local/bin/google-cloud-sdk/path.zsh.inc' ]; then . '/home/aman/.local/bin/google-cloud-sdk/path.zsh.inc'; fi
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/aman/.local/bin/google-cloud-sdk/path.zsh.inc' ]; then . '/home/aman/.local/bin/google-cloud-sdk/path.zsh.inc'; fi
 
-# The next line enables shell command completion for gcloud.
-if [ -f '/home/aman/.local/bin/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/aman/.local/bin/google-cloud-sdk/completion.zsh.inc'; fi
+
+# opencode
+export PATH=/home/aman/.opencode/bin:$PATH
+
+# bun completions
+[ -s "/home/aman/.bun/_bun" ] && source "/home/aman/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
